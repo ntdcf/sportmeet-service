@@ -1,0 +1,5 @@
+com\SportMeet\Service\Controller\UserController.class
+com\SportMeet\Service\API\ServerAPI.class
+com\SportMeet\Service\Controller\TestController.class
+com\SportMeet\Service\API\UserSessionContext.class
+com\SportMeet\Service\API\UserSessionListener.class
