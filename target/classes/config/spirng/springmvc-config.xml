@@ -15,19 +15,21 @@
 		http://www.springframework.org/schema/context/spring-context.xsd">
 
     <context:component-scan base-package="com.SportMeet.Service.Controller"/>
-    <context:component-scan base-package="com.Music.Service"/>
+    <context:component-scan base-package="com.SportMeet.Service.Service"/>
 
     <mvc:annotation-driven/>
 
     <mvc:resources location="/js/" mapping="/js/**"/>
     <mvc:resources location="/images/" mapping="/images/**"/>
     <mvc:resources location="/css/" mapping="/css/**"/>
-    <mvc:resources location="/fonts/" mapping="/fonts/**"/>
-    <mvc:resources location="/music/" mapping="/music/**"/>
-    <!--<mvc:resources location="/textFile/" mapping="/textFile/**"/>-->
-    <mvc:resources location="/static/" mapping="/static/**"/>
 
-
+    <!--拦截器-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/*.do"/>
+            <bean class="com.SportMeet.Service.Interceptor.SessionInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 
     <bean id="viewResolver"
           class="org.springframework.web.servlet.view.InternalResourceViewResolver">

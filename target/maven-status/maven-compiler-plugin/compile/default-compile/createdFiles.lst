@@ -1,5 +1,10 @@
-com\SportMeet\Service\Controller\UserController.class
-com\SportMeet\Service\API\ServerAPI.class
+com\SportMeet\Service\Controller\IndexController.class
+com\SportMeet\Service\Interceptor\SessionInterceptor.class
 com\SportMeet\Service\Controller\TestController.class
 com\SportMeet\Service\API\UserSessionContext.class
+com\SportMeet\Service\Controller\UserController.class
+com\SportMeet\Service\Interface\UserInterface.class
+com\SportMeet\Service\Service\UserService.class
+com\SportMeet\Service\API\ServerAPI.class
 com\SportMeet\Service\API\UserSessionListener.class
+com\SportMeet\Service\Controller\LoginController.class
