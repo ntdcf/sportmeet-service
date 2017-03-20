@@ -17,10 +17,19 @@
                     <input type="text" name="username" data-clear-btn="true" placeholder="请输入要查询的内容"/>
                 </form>
             </div>
+            <div  data-role="main" class="ui-content">
             <div>
-                
+                <ul data-role="listview" id="listAct">
+                                   <li>
+                                       <div data-role="controlgroup" data-type="horizontal" align="center">
+                                           <a href="activity" class="ui-btn ui-icon-search ui-btn-icon-left">活动查询</a>
+                                           <a href="signup" class="ui-btn ui-icon-grid ui-btn-icon-left">项目报名</a>
+                                       </div>
+                                   </li>
+                </ul>
             </div>
         </div>
+    </div>
     </body>
 
     <script src="js/jquery-1.11.3.min.js"></script>
