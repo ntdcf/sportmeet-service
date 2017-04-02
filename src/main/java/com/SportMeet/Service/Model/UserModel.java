@@ -1,6 +1,7 @@
 package com.SportMeet.Service.Model;
 
 import com.SportMeet.Service.Model.Empty.User;
+import com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -35,5 +36,19 @@ public class UserModel {
         User user = session.selectOne(SQLClass, id);
         session.close();
         return user;
+    }
+
+    public boolean insertUserByUnPw(User user) {
+        int res = 0;
+        try {
+            create();
+            String SQLClass = "com.SportMeet.Service.Model.UserMapper.insertUserReg";
+            session.insert(SQLClass, user);
+            session.commit();
+            session.close();
+        } catch (Exception e) {
+            return false;
+        }
+        return true;
     }
 }

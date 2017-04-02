@@ -20,4 +20,9 @@ public class UserService implements UserInterface {
     public User findUser(String id) {
         return userModel.getUser(id);
     }
+
+    @Override
+    public boolean addUser(User user) {
+        return userModel.insertUserByUnPw(user);
+    }
 }

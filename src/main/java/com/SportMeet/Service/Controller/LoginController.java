@@ -2,6 +2,7 @@ package com.SportMeet.Service.Controller;
 
 import com.SportMeet.Service.Interface.UserInterface;
 import com.SportMeet.Service.Model.Empty.User;
+import com.SportMeet.Service.Service.BothService;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -9,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
+import java.io.UnsupportedEncodingException;
 
 /**
  * Created by luohao3 on 2017/3/18.
@@ -39,11 +41,14 @@ public class LoginController {
 
     @RequestMapping(value = "login")
     @ResponseBody
-    public String loginUser(@RequestParam("data") String data, HttpSession session) {
+    public String loginUser(@RequestBody String data, HttpSession session) throws UnsupportedEncodingException {
+        data = BothService.getJson(data);
+        System.out.println(data);
         JSONObject UserLoginData = new JSONObject(data);
         String username = (String)UserLoginData.get("username");
         String password = (String)UserLoginData.get("password");
         User user = UserDo.findUser(username);
+        System.out.println(user);
         if (user == null) return "0";
         if (user.getPassword().equals(password)) {
             session.setAttribute("User", user);
@@ -60,18 +65,4 @@ public class LoginController {
     }
 
 
-//    @RequestMapping(value = "addUser")
-//    public String regUser() {
-//        return "reg";
-//    }
-//
-//    @RequestMapping(value = "activity")
-//    public String searchAct() {
-//        return "activity";
-//    }
-//
-//    @RequestMapping(value = "signup")
-//    public String sginupProject() {
-//        return "signup";
-//    }
 }

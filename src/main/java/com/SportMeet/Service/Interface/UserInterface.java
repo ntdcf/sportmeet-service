@@ -7,4 +7,5 @@ import com.SportMeet.Service.Model.Empty.User;
  */
 public interface UserInterface {
     public User findUser(String id);
+    public boolean addUser(User user);
 }
