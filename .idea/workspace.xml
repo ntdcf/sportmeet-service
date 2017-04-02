@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f22648e7-3f5a-4cb7-a76f-a2289b60fffd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/SportMeet/Service/Controller/ActivityController.class" afterPath="$PROJECT_DIR$/target/classes/com/SportMeet/Service/Controller/ActivityController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/SportMeet/Service/Controller/LoginController.class" afterPath="$PROJECT_DIR$/target/classes/com/SportMeet/Service/Controller/LoginController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/SportMeet/Service/Controller/IndexController.class" afterPath="$PROJECT_DIR$/target/classes/com/SportMeet/Service/Controller/IndexController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/SportMeet/Service/Interface/UserInterface.class" afterPath="$PROJECT_DIR$/target/classes/com/SportMeet/Service/Interface/UserInterface.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/SportMeet/Service/Model/UserModel.class" afterPath="$PROJECT_DIR$/target/classes/com/SportMeet/Service/Model/UserModel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/SportMeet/Service/Service/UserService.class" afterPath="$PROJECT_DIR$/target/classes/com/SportMeet/Service/Service/UserService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/config/mybatis/mybatisConfig.xml" afterPath="$PROJECT_DIR$/target/classes/config/mybatis/mybatisConfig.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/config/mybatis/UserMapper.xml" afterPath="$PROJECT_DIR$/target/classes/config/mybatis/UserMapper.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -970,7 +970,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491163953462</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="登录注册模块完成">
+      <created>1491163967666</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1491163967666</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
