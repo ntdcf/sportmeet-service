@@ -1,11 +1,13 @@
 package com.SportMeet.Service.Model.Empty;
 
+import java.sql.Date;
+
 /**
  * Created by luohao3 on 2017/3/20.
  */
 public class Activity {
     private int id;
-    private String sendtime;
+    private int sendtime;
     private int user;
     private String msg;
 
@@ -17,11 +19,11 @@ public class Activity {
         this.id = id;
     }
 
-    public String getSendtime() {
+    public int getSendtime() {
         return sendtime;
     }
 
-    public void setSendtime(String sendtime) {
+    public void setSendtime(int sendtime) {
         this.sendtime = sendtime;
     }
 
@@ -45,7 +47,7 @@ public class Activity {
     public String toString() {
         return "Activity{" +
                 "id=" + id +
-                ", sendtime='" + sendtime + '\'' +
+                ", sendtime=" + sendtime +
                 ", user=" + user +
                 ", msg='" + msg + '\'' +
                 '}';

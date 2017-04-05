@@ -25,4 +25,9 @@ public class UserService implements UserInterface {
     public boolean addUser(User user) {
         return userModel.insertUserByUnPw(user);
     }
+
+    @Override
+    public int editUser(User user) {
+        return userModel.updateUserById(user);
+    }
 }

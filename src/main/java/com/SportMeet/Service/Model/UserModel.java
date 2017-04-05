@@ -51,4 +51,18 @@ public class UserModel {
         }
         return true;
     }
+
+    public int updateUserById(User user) {
+        int res = 0;
+        try {
+            create();
+            String SQLClass = "com.SportMeet.Service.Model.UserMapper.updateUserByid";
+            res = session.update(SQLClass, user);
+            session.commit();
+            session.close();
+        } catch (Exception e) {
+            return 0;
+        }
+        return res;
+    }
 }

@@ -1,7 +1,7 @@
 package com.SportMeet.Service.Controller;
 
 import com.SportMeet.Service.Interface.ActivityInterface;
-import com.SportMeet.Service.Model.Empty.Activity;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,12 +24,11 @@ public class ActivityController {
 
     @RequestMapping(value = "getMsg")
     @ResponseBody
-    public String showActivity() {
-        String res = "";
-        List<Activity> list = activityDo.getIndexActivity();
-        for (Activity activity : list) {
-            res += "<li><div data-role=\"controlgroup\" data-type=\"horizontal\" align=\"center\">"+activity.getMsg()+"</div></li>";
-        }
-        return res;
+    public String index() {
+        List activities = activityDo.getIndexActivity();
+        JSONObject actjson = new JSONObject(activities);
+        System.out.println(actjson.toString());
+//        System.out.println("aaaa");
+        return "";
     }
 }
