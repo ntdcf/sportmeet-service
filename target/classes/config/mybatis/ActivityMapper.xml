@@ -4,7 +4,7 @@
 
 <mapper namespace="com.SportMeet.Service.Model.ActivityMapper">
     <select id="getActivity" parameterType="String" resultType="com.SportMeet.Service.Model.Empty.Activity">
-        select * from activity limit order by 'sendtime' desc 0,5
+        select * from activity  order by 'sendtime' desc limit 0,5
     </select>
 
 </mapper>

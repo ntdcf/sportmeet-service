@@ -5,6 +5,6 @@ package com.SportMeet.Service.Service;
  */
 public class BothService {
     public static String getJson(String data) {
-        return data.substring(data.indexOf("{"), data.indexOf("}")+1);
+        return data.substring(data.indexOf("{"), data.length());
     }
 }

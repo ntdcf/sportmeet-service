@@ -8,7 +8,7 @@ public class User {
     private String username;
     private String password;
     private String railname;
-    private String collage;
+    private int collage;
     private String internetname;
     private int grade;
     private int classin;
@@ -45,11 +45,11 @@ public class User {
         this.railname = railname;
     }
 
-    public String getCollage() {
+    public int getCollage() {
         return collage;
     }
 
-    public void setCollage(String collage) {
+    public void setCollage(int collage) {
         this.collage = collage;
     }
 
