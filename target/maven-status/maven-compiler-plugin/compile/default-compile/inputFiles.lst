@@ -1,5 +1,6 @@
 /Users/luohao/Documents/code/mytest/java/SportMeetService/src/main/java/com/SportMeet/Service/Controller/LoginController.java
 /Users/luohao/Documents/code/mytest/java/SportMeetService/src/main/java/com/SportMeet/Service/Model/Empty/User.java
+/Users/luohao/Documents/code/mytest/java/SportMeetService/src/main/java/com/SportMeet/Service/Service/BothService.java
 /Users/luohao/Documents/code/mytest/java/SportMeetService/src/main/java/com/SportMeet/Service/Model/ActivityModel.java
 /Users/luohao/Documents/code/mytest/java/SportMeetService/src/main/java/com/SportMeet/Service/Model/Empty/Activity.java
 /Users/luohao/Documents/code/mytest/java/SportMeetService/src/main/java/com/SportMeet/Service/Service/ActivityService.java
@@ -15,3 +16,4 @@
 /Users/luohao/Documents/code/mytest/java/SportMeetService/src/main/java/com/SportMeet/Service/API/UserSessionListener.java
 /Users/luohao/Documents/code/mytest/java/SportMeetService/src/main/java/com/SportMeet/Service/Controller/UserController.java
 /Users/luohao/Documents/code/mytest/java/SportMeetService/src/main/java/com/SportMeet/Service/Interface/ActivityInterface.java
+/Users/luohao/Documents/code/mytest/java/SportMeetService/src/main/java/com/SportMeet/Service/Controller/RegController.java

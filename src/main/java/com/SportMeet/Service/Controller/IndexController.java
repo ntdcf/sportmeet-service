@@ -25,7 +25,7 @@ public class IndexController {
         session.removeAttribute("User");
     }
 
-    @RequestMapping(value = "userindex")
+    @RequestMapping(value = "userindex",produces="text/html;charset=UTF-8")
     @ResponseBody
     public String getUserInfo(@RequestBody String username) {
         User user = userDo.findUser(username.substring(username.indexOf("0")));

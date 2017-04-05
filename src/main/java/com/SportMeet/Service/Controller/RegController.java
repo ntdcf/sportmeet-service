@@ -24,8 +24,10 @@ public class RegController {
         data = BothService.getJson(data);
         JSONObject regdata = new JSONObject(data);
         User user = new User();
+        user.setRailname(regdata.getString("railname"));
         user.setUsername(regdata.getString("username"));
         user.setPassword(regdata.getString("password"));
+        System.out.println(user);
         if (userDo.addUser(user)) {
             return "1";
         }

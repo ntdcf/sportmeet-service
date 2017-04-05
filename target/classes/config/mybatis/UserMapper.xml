@@ -8,7 +8,7 @@
     </select>
 
     <insert id="insertUserReg" parameterType="com.SportMeet.Service.Model.Empty.User">
-        insert into user (username, password) values (#{username}, #{password})
+        insert into user (username, password, railname) values (#{username}, #{password}, #{railname})
     </insert>
 
 </mapper>
