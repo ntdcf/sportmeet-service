@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 /Users/luohao/Documents/code/mytest/java/SportMeetService/src/main/java/com/SportMeet/Service/Controller/LoginController.java
 /Users/luohao/Documents/code/mytest/java/SportMeetService/src/main/java/com/SportMeet/Service/Model/Empty/User.java
 /Users/luohao/Documents/code/mytest/java/SportMeetService/src/main/java/com/SportMeet/Service/Service/BothService.java
@@ -19,29 +17,3 @@
 /Users/luohao/Documents/code/mytest/java/SportMeetService/src/main/java/com/SportMeet/Service/Controller/UserController.java
 /Users/luohao/Documents/code/mytest/java/SportMeetService/src/main/java/com/SportMeet/Service/Interface/ActivityInterface.java
 /Users/luohao/Documents/code/mytest/java/SportMeetService/src/main/java/com/SportMeet/Service/Controller/RegController.java
-=======
-=======
->>>>>>> 9b24c4ba0e73e1746e31ecdb3f80ba2ece63ef94
-F:\code\java\SportMeetService\src\main\java\com\SportMeet\Service\Interceptor\SessionInterceptor.java
-F:\code\java\SportMeetService\src\main\java\com\SportMeet\Service\Controller\UserController.java
-F:\code\java\SportMeetService\src\main\java\com\SportMeet\Service\API\UserSessionListener.java
-F:\code\java\SportMeetService\src\main\java\com\SportMeet\Service\Controller\IndexController.java
-F:\code\java\SportMeetService\src\main\java\com\SportMeet\Service\Controller\ActivityController.java
-F:\code\java\SportMeetService\src\main\java\com\SportMeet\Service\Model\ActivityModel.java
-F:\code\java\SportMeetService\src\main\java\com\SportMeet\Service\API\UserSessionContext.java
-F:\code\java\SportMeetService\src\main\java\com\SportMeet\Service\Service\BothService.java
-F:\code\java\SportMeetService\src\main\java\com\SportMeet\Service\Interface\ActivityInterface.java
-F:\code\java\SportMeetService\src\main\java\com\SportMeet\Service\Model\Empty\Activity.java
-F:\code\java\SportMeetService\src\main\java\com\SportMeet\Service\API\ServerAPI.java
-F:\code\java\SportMeetService\src\main\java\com\SportMeet\Service\Controller\RegController.java
-F:\code\java\SportMeetService\src\main\java\com\SportMeet\Service\Model\UserModel.java
-F:\code\java\SportMeetService\src\main\java\com\SportMeet\Service\Controller\TestController.java
-F:\code\java\SportMeetService\src\main\java\com\SportMeet\Service\Controller\LoginController.java
-F:\code\java\SportMeetService\src\main\java\com\SportMeet\Service\Service\ActivityService.java
-F:\code\java\SportMeetService\src\main\java\com\SportMeet\Service\Interface\UserInterface.java
-F:\code\java\SportMeetService\src\main\java\com\SportMeet\Service\Service\UserService.java
-F:\code\java\SportMeetService\src\main\java\com\SportMeet\Service\Model\Empty\User.java
-<<<<<<< HEAD
->>>>>>> 9b24c4ba0e73e1746e31ecdb3f80ba2ece63ef94
-=======
->>>>>>> 9b24c4ba0e73e1746e31ecdb3f80ba2ece63ef94

@@ -29,10 +29,10 @@ public class ActivityModel {
         session = sqlSessionFactory.openSession();
     }
 
-    public List getActivity() {
+    public List<Activity> getActivity() {
         create();
         String SQLClass = "com.SportMeet.Service.Model.ActivityMapper.getActivity";
-        List list = session.selectList(SQLClass);
+        List<Activity> list = session.selectList(SQLClass);
         session.close();
         return list;
     }

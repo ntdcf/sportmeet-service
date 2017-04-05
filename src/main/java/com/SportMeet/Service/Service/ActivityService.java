@@ -2,6 +2,7 @@ package com.SportMeet.Service.Service;
 
 import com.SportMeet.Service.Interface.ActivityInterface;
 import com.SportMeet.Service.Model.ActivityModel;
+import com.SportMeet.Service.Model.Empty.Activity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,7 +19,7 @@ public class ActivityService implements ActivityInterface {
     }
 
     @Override
-    public List getIndexActivity() {
+    public List<Activity> getIndexActivity() {
         return activityModel.getActivity();
     }
 }
