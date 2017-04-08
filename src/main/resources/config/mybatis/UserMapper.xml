@@ -15,4 +15,8 @@
         update user set collage = #{collage}, grade = #{grade}, classin = #{classin}, internetname = #{internetname} where id = #{id}
     </update>
 
+    <select id="getCollageInCollage" resultType="com.SportMeet.Service.Model.Empty.Collage">
+        select * from collage
+    </select>
+
 </mapper>

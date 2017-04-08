@@ -6,6 +6,7 @@ import com.SportMeet.Service.API.UserSessionListener;
 import com.SportMeet.Service.Interface.UserInterface;
 import com.SportMeet.Service.Model.Empty.User;
 import com.SportMeet.Service.Service.BothService;
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -39,5 +40,12 @@ public class UserController {
         user.setInternetname(userjson.getString("internetname"));
         if (userDo.editUser(user) !=0) return "1";
         return "0";
+    }
+
+    @RequestMapping(value = "usercollage")
+    @ResponseBody
+    public String setUserCollage() {
+        JSONArray res = new JSONArray(userDo.getCollage());
+        return res.toString();
     }
 }

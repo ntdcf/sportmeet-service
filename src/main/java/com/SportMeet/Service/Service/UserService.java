@@ -1,9 +1,14 @@
 package com.SportMeet.Service.Service;
 
 import com.SportMeet.Service.Interface.UserInterface;
+import com.SportMeet.Service.Model.Empty.Collage;
 import com.SportMeet.Service.Model.Empty.User;
 import com.SportMeet.Service.Model.UserModel;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by luohao3 on 2017/3/19.
@@ -29,5 +34,10 @@ public class UserService implements UserInterface {
     @Override
     public int editUser(User user) {
         return userModel.updateUserById(user);
+    }
+
+    @Override
+    public List<Collage> getCollage() {
+        return userModel.getCollageInCollTb();
     }
 }
