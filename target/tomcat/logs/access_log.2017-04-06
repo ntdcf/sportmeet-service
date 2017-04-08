@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 192.168.10.142 - - [06/Apr/2017:20:24:01 +0800] "POST /SportMeetService/login HTTP/1.1" 200 1 http-bio-8888-exec-1 688
 192.168.10.142 - - [06/Apr/2017:20:24:03 +0800] "POST /SportMeetService/login HTTP/1.1" 200 1 http-bio-8888-exec-2 27
 192.168.10.142 - - [06/Apr/2017:20:24:04 +0800] "POST /SportMeetService/userindex HTTP/1.1" 200 123 http-bio-8888-exec-3 42
@@ -20,3 +21,29 @@
 192.168.10.142 - - [06/Apr/2017:22:49:40 +0800] "POST /SportMeetService/userindex HTTP/1.1" 200 123 http-bio-8888-exec-3 39
 192.168.10.142 - - [06/Apr/2017:23:02:30 +0800] "POST /SportMeetService/getMsg HTTP/1.1" 200 107 http-bio-8888-exec-8 50
 192.168.10.142 - - [06/Apr/2017:23:02:34 +0800] "POST /SportMeetService/getMsg HTTP/1.1" 200 107 http-bio-8888-exec-8 35
+=======
+10.17.45.183 - - [06/Apr/2017:11:14:30 +0800] "GET /SportMeetService HTTP/1.1" 302 - http-bio-8888-exec-3 0
+10.17.45.183 - - [06/Apr/2017:11:14:31 +0800] "GET /SportMeetService/ HTTP/1.1" 200 1084 http-bio-8888-exec-4 979
+10.17.45.183 - - [06/Apr/2017:11:14:31 +0800] "GET /SportMeetService/js/jump.js HTTP/1.1" 200 815 http-bio-8888-exec-8 43
+10.17.45.183 - - [06/Apr/2017:11:14:31 +0800] "GET /SportMeetService/js/jquery-1.11.3.min.js HTTP/1.1" 200 95962 http-bio-8888-exec-6 47
+10.17.45.183 - - [06/Apr/2017:11:14:31 +0800] "GET /SportMeetService/js/jquery.mobile-1.4.5.min.js HTTP/1.1" 200 200152 http-bio-8888-exec-7 49
+10.17.45.183 - - [06/Apr/2017:11:14:31 +0800] "GET /SportMeetService/css/jquery.mobile-1.4.5.css HTTP/1.1" 200 244276 http-bio-8888-exec-5 55
+10.17.45.183 - - [06/Apr/2017:11:14:32 +0800] "GET /SportMeetService/css/images/ajax-loader.gif HTTP/1.1" 200 6242 http-bio-8888-exec-5 4
+10.17.45.183 - - [06/Apr/2017:12:40:27 +0800] "GET /SportMeetService HTTP/1.1" 302 - http-bio-8888-exec-3 0
+10.17.45.183 - - [06/Apr/2017:12:40:27 +0800] "GET /SportMeetService/ HTTP/1.1" 200 1084 http-bio-8888-exec-5 174
+10.17.45.183 - - [06/Apr/2017:12:40:27 +0800] "GET /SportMeetService/js/jump.js HTTP/1.1" 200 815 http-bio-8888-exec-8 36
+10.17.45.183 - - [06/Apr/2017:12:40:27 +0800] "GET /SportMeetService/js/jquery-1.11.3.min.js HTTP/1.1" 200 95962 http-bio-8888-exec-4 48
+10.17.45.183 - - [06/Apr/2017:12:40:27 +0800] "GET /SportMeetService/js/jquery.mobile-1.4.5.min.js HTTP/1.1" 200 200152 http-bio-8888-exec-7 60
+10.17.45.183 - - [06/Apr/2017:12:40:27 +0800] "GET /SportMeetService/css/jquery.mobile-1.4.5.css HTTP/1.1" 200 244276 http-bio-8888-exec-6 69
+10.17.45.183 - - [06/Apr/2017:12:40:27 +0800] "GET /SportMeetService/css/images/ajax-loader.gif HTTP/1.1" 200 6242 http-bio-8888-exec-6 9
+10.17.45.183 - - [06/Apr/2017:12:40:27 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8888-exec-6 0
+10.18.127.21 - - [06/Apr/2017:12:54:14 +0800] "GET /SportMeetService/ HTTP/1.1" 200 1084 http-bio-8888-exec-4 25
+10.18.127.21 - - [06/Apr/2017:12:54:14 +0800] "GET /SportMeetService/css/jquery.mobile-1.4.5.css HTTP/1.1" 200 244276 http-bio-8888-exec-4 34
+10.18.127.21 - - [06/Apr/2017:12:54:14 +0800] "GET /SportMeetService/js/jump.js HTTP/1.1" 200 815 http-bio-8888-exec-8 18
+10.18.127.21 - - [06/Apr/2017:12:54:14 +0800] "GET /SportMeetService/js/jquery-1.11.3.min.js HTTP/1.1" 200 95962 http-bio-8888-exec-1 117
+10.18.127.21 - - [06/Apr/2017:12:54:15 +0800] "GET /SportMeetService/js/jquery.mobile-1.4.5.min.js HTTP/1.1" 200 200152 http-bio-8888-exec-5 157
+10.18.127.21 - - [06/Apr/2017:12:54:15 +0800] "GET /SportMeetService/css/images/ajax-loader.gif HTTP/1.1" 200 6242 http-bio-8888-exec-5 6
+10.18.127.21 - - [06/Apr/2017:12:54:15 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8888-exec-3 0
+10.18.127.21 - - [06/Apr/2017:12:54:25 +0800] "POST /SportMeetService/login HTTP/1.1" 500 10625 http-bio-8888-exec-7 853
+10.18.127.21 - - [06/Apr/2017:12:55:28 +0800] "POST /SportMeetService/login HTTP/1.1" 500 10625 http-bio-8888-exec-2 752
+>>>>>>> 8414b36ff2f3d6fd0bc9f2d25d158cac26514fc5
