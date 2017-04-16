@@ -11,7 +11,6 @@ public class User {
     private int collage;
     private String internetname;
     private int grade;
-    private int classin;
 
     public int getId() {
         return id;
@@ -69,13 +68,6 @@ public class User {
         this.grade = grade;
     }
 
-    public int getClassin() {
-        return classin;
-    }
-
-    public void setClassin(int classin) {
-        this.classin = classin;
-    }
 
     @Override
     public String toString() {
@@ -87,7 +79,6 @@ public class User {
                 ", collage='" + collage + '\'' +
                 ", internetname='" + internetname + '\'' +
                 ", grade=" + grade +
-                ", classin=" + classin +
                 '}';
     }
 }

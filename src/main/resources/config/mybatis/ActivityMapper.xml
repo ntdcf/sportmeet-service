@@ -4,7 +4,11 @@
 
 <mapper namespace="com.SportMeet.Service.Model.ActivityMapper">
     <select id="getActivity" parameterType="String" resultType="com.SportMeet.Service.Model.Empty.Activity">
-        select * from activity  order by 'sendtime' desc limit 0,5
+        select * from activity  order by 'sendtime' desc limit 0,30
     </select>
+
+    <insert id="addSignUp" parameterType="com.SportMeet.Service.Model.Empty.SignUp">
+        insert into signup (activityid, userid) values (#{activityid}, #{userid})
+    </insert>
 
 </mapper>

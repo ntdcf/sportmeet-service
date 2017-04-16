@@ -1,6 +1,7 @@
 package com.SportMeet.Service.Interface;
 
 import com.SportMeet.Service.Model.Empty.Activity;
+import com.SportMeet.Service.Model.Empty.SignUp;
 
 import java.util.List;
 
@@ -9,4 +10,5 @@ import java.util.List;
  */
 public interface ActivityInterface {
     public List<Activity> getIndexActivity();
+    public int addSignUp(SignUp signUp);
 }

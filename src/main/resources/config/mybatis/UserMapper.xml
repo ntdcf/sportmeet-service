@@ -12,7 +12,13 @@
     </insert>
 
     <update id="updateUserByid" parameterType="com.SportMeet.Service.Model.Empty.User">
-        update user set collage = #{collage}, grade = #{grade}, classin = #{classin}, internetname = #{internetname} where id = #{id}
+        update user
+        set
+        collage = #{collage},
+        grade = #{grade},
+        internetname = #{internetname},
+        railname=#{railname}
+        where id = #{id}
     </update>
 
     <select id="getCollageInCollage" resultType="com.SportMeet.Service.Model.Empty.Collage">

@@ -6,6 +6,7 @@ import com.SportMeet.Service.API.UserSessionListener;
 import com.SportMeet.Service.Interface.UserInterface;
 import com.SportMeet.Service.Model.Empty.User;
 import com.SportMeet.Service.Service.BothService;
+import com.google.gson.Gson;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,13 +32,9 @@ public class UserController {
     @RequestMapping(value = "edituser")
     @ResponseBody
     public String editUser(@RequestBody String userinfo) {
-        JSONObject userjson = new JSONObject(BothService.getJson(userinfo));
-        User user = new User();
-        user.setId(userjson.getInt("id"));
-        user.setCollage(userjson.getInt("collage"));
-        user.setGrade(userjson.getInt("grade"));
-        user.setClassin(userjson.getInt("classin"));
-        user.setInternetname(userjson.getString("internetname"));
+        System.out.println(userinfo);
+        Gson usergson = new Gson();
+        User user = usergson.fromJson(BothService.getJson(userinfo), User.class);
         if (userDo.editUser(user) !=0) return "1";
         return "0";
     }
@@ -47,5 +44,12 @@ public class UserController {
     public String setUserCollage() {
         JSONArray res = new JSONArray(userDo.getCollage());
         return res.toString();
+    }
+
+    @RequestMapping(value = "getuser")
+    @ResponseBody
+    public String getUser(@RequestBody String userinfo) {
+        User user = userDo.findUser(new Gson().fromJson(BothService.getJson(userinfo), User.class).getUsername());
+        return new Gson().toJson(user);
     }
 }
