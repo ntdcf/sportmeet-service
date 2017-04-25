@@ -17,7 +17,7 @@
         collage = #{collage},
         grade = #{grade},
         internetname = #{internetname},
-        railname=#{railname}
+        railname = #{railname}
         where id = #{id}
     </update>
 
