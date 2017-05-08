@@ -13,8 +13,4 @@ public class BothService {
     public static String getJson(String data) {
         return data.substring(data.indexOf("{"), data.length());
     }
-
-    public static String getResult(Result result) {
-        return new Gson().toJson(result);
-    }
 }

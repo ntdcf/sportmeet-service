@@ -1,43 +1,26 @@
 package com.SportMeet.Service.Model.Empty;
 
+import com.google.gson.Gson;
+
 /**
  * Created by luohao on 2017/5/2.
+ * 用来生成返回结果的类，重写了toString方法返回json
  */
 public class Result {
     private int num;
+    private boolean res;
     private String msg;
-    private String data;
+    private Object data;
 
-    public int getNum() {
-        return num;
-    }
-
-    public void setNum(int num) {
+    public Result(int num, boolean res, String msg, Object data) {
         this.num = num;
-    }
-
-    public String getMsg() {
-        return msg;
-    }
-
-    public void setMsg(String msg) {
+        this.res = res;
         this.msg = msg;
-    }
-
-    public String getData() {
-        return data;
-    }
-
-    public void setData(String data) {
         this.data = data;
     }
 
     @Override
     public String toString() {
-        return "Result{" +
-                "num=" + num +
-                ", msg=" + msg +
-                ", data='" + data + '\'' +
-                '}';
+        return new Gson().toJson(this);
     }
 }
