@@ -10,7 +10,5 @@ public class BothService {
     public static final int SUCCESS = 1;
     public static final int FAILS = 0;
 
-    public static String getJson(String data) {
-        return data.substring(data.indexOf("{"), data.length());
-    }
+
 }
