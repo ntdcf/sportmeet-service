@@ -36,4 +36,12 @@ public class ActivityModel {
         session.close();
         return list;
     }
+
+    public List<Activity> getActivity(Activity activity) {
+        create();
+        String SQLClass = "com.SportMeet.Service.Model.ActivityMapper.getActivityByName";
+        List<Activity> list = session.selectList(SQLClass, activity);
+        session.close();
+        return list;
+    }
 }

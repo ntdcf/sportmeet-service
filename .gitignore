@@ -1,3 +1,4 @@
 target/
 .idea/
 SportMeetService.iml
+src/main/webapp/WEB-INF/jsp/

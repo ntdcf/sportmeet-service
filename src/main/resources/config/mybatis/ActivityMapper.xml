@@ -7,8 +7,32 @@
         select * from activity  order by 'sendtime' desc limit 0,30
     </select>
 
+    <select id="getActivityByName" parameterType="String" resultType="com.SportMeet.Service.Model.Empty.Activity">
+        select * from activity where msg like #{msg}
+    </select>
+
     <insert id="addSignUp" parameterType="com.SportMeet.Service.Model.Empty.SignUp">
         insert into signup (activityid, userid) values (#{activityid}, #{userid})
     </insert>
+
+    <select id="getSignUp"
+            parameterType="com.SportMeet.Service.Model.Empty.SignUp"
+            resultType="com.SportMeet.Service.Model.Empty.SignUp">
+        select * from signup where activityid=#{activityid} and userid=#{userid}
+    </select>
+
+    <select id="getSignUpByUserId"
+            parameterType="com.SportMeet.Service.Model.Empty.User"
+            resultType="com.SportMeet.Service.Model.Empty.SignUp">
+        select * from signup where userid=#{id}
+    </select>
+
+    <select id="getCountUserSign" resultType="int" parameterType="int">
+        select count(*) from signup where userid=#{userid}
+    </select>
+
+    <delete id="deleteSignUp" parameterType="com.SportMeet.Service.Model.Empty.SignUp">
+        delete from signup where activityid=#{activityid} and userid=#{userid}
+    </delete>
 
 </mapper>

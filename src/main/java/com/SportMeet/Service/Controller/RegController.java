@@ -3,6 +3,7 @@ package com.SportMeet.Service.Controller;
 import com.SportMeet.Service.Interface.UserInterface;
 import com.SportMeet.Service.Model.Empty.User;
 import com.SportMeet.Service.Service.BothService;
+import com.google.gson.Gson;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,13 +22,7 @@ public class RegController {
     @RequestMapping(value = "reg")
     @ResponseBody
     public String index(@RequestBody String data) {
-        data = BothService.getJson(data);
-        JSONObject regdata = new JSONObject(data);
-        User user = new User();
-        user.setRailname(regdata.getString("railname"));
-        user.setUsername(regdata.getString("username"));
-        user.setPassword(regdata.getString("password"));
-        System.out.println(user);
+        User user = new Gson().fromJson(data, User.class);
         if (userDo.addUser(user)) {
             return "1";
         }

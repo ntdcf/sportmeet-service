@@ -10,6 +10,7 @@ public class Activity {
     private int sendtime;
     private int user;
     private String msg;
+    private boolean sex;
 
     public int getId() {
         return id;
@@ -43,6 +44,14 @@ public class Activity {
         this.msg = msg;
     }
 
+    public boolean getSex() {
+        return sex;
+    }
+
+    public void setSex(boolean sex) {
+        this.sex = sex;
+    }
+
     @Override
     public String toString() {
         return "Activity{" +
@@ -50,6 +59,7 @@ public class Activity {
                 ", sendtime=" + sendtime +
                 ", user=" + user +
                 ", msg='" + msg + '\'' +
+                ", sex=" + sex +
                 '}';
     }
 }

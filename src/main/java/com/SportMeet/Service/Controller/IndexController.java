@@ -28,7 +28,7 @@ public class IndexController {
     @RequestMapping(value = "userindex",produces="text/html;charset=UTF-8")
     @ResponseBody
     public String getUserInfo(@RequestBody String username) {
-        User user = userDo.findUser(username.substring(username.indexOf("0")));
+        User user = userDo.findUser(username);
         JSONObject userInfo = new JSONObject(user);
         return userInfo.toString();
     }

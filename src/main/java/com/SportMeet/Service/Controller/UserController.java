@@ -34,7 +34,7 @@ public class UserController {
     public String editUser(@RequestBody String userinfo) {
         System.out.println(userinfo);
         Gson usergson = new Gson();
-        User user = usergson.fromJson(BothService.getJson(userinfo), User.class);
+        User user = usergson.fromJson(userinfo, User.class);
         if (userDo.editUser(user) !=0) return "1";
         return "0";
     }
@@ -49,7 +49,7 @@ public class UserController {
     @RequestMapping(value = "getuser")
     @ResponseBody
     public String getUser(@RequestBody String userinfo) {
-        User user = userDo.findUser(new Gson().fromJson(BothService.getJson(userinfo), User.class).getUsername());
+        User user = userDo.findUser(new Gson().fromJson(userinfo, User.class).getUsername());
         return new Gson().toJson(user);
     }
 }

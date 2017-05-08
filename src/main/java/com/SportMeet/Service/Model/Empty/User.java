@@ -11,6 +11,7 @@ public class User {
     private int collage;
     private String internetname;
     private int grade;
+    private boolean sex;
 
     public int getId() {
         return id;
@@ -68,6 +69,13 @@ public class User {
         this.grade = grade;
     }
 
+    public boolean getSex() {
+        return sex;
+    }
+
+    public void setSex(boolean sex) {
+        this.sex = sex;
+    }
 
     @Override
     public String toString() {
@@ -76,9 +84,10 @@ public class User {
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", railname='" + railname + '\'' +
-                ", collage='" + collage + '\'' +
+                ", collage=" + collage +
                 ", internetname='" + internetname + '\'' +
                 ", grade=" + grade +
+                ", sex=" + sex +
                 '}';
     }
 }

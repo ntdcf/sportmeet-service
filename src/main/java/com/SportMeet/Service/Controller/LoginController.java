@@ -3,6 +3,7 @@ package com.SportMeet.Service.Controller;
 import com.SportMeet.Service.Interface.UserInterface;
 import com.SportMeet.Service.Model.Empty.User;
 import com.SportMeet.Service.Service.BothService;
+import com.google.gson.Gson;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -42,8 +43,6 @@ public class LoginController {
     @RequestMapping(value = "login")
     @ResponseBody
     public String loginUser(@RequestBody String data, HttpSession session) throws UnsupportedEncodingException {
-        data = BothService.getJson(data);
-        System.out.println(data);
         JSONObject UserLoginData = new JSONObject(data);
         String username = (String)UserLoginData.get("username");
         String password = (String)UserLoginData.get("password");
