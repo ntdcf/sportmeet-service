@@ -40,4 +40,9 @@ public class UserService implements UserInterface {
     public List<Collage> getCollage() {
         return userModel.getCollageInCollTb();
     }
+
+    @Override
+    public Map<Integer, String> findUser(List userid) {
+        return null;
+    }
 }

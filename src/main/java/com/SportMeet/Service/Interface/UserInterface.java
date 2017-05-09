@@ -13,4 +13,5 @@ public interface UserInterface {
     public boolean addUser(User user);
     public int editUser(User user);
     public List getCollage();
+    public Map<Integer, String> findUser(List userid);
 }

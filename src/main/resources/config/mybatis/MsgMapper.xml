@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.SportMeet.Service.Model.MsgMapper">
+    <select id="getMsgToYestDay" resultType="com.SportMeet.Service.Model.Empty.Msg">
+        select
+            msg.time,
+            msg.msg,
+            user.username,
+            user.internetname
+        from
+            msg join user
+        on msg.user=user.id
+        order by msg.time desc;
+    </select>
+
+    <insert id="addMsg" parameterType="com.SportMeet.Service.Model.Empty.Msg">
+        insert into msg (user, time, msg) values (#{user}, #{time}, #{msg})
+    </insert>
+</mapper>

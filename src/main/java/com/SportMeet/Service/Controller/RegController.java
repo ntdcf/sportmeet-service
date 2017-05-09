@@ -25,9 +25,6 @@ public class RegController {
     @ResponseBody
     public String index(@RequestBody String data) {
         User user = new Gson().fromJson(data, User.class);
-//        String json = new Result<User>(1, true, "userinfo", user).toString();
-//        Result<User> res = new Gson().fromJson(json, new TypeToken<Result<User>>(){}.getType());
-//        System.out.println(res);
         if (userDo.addUser(user)) {
             return "1";
         }

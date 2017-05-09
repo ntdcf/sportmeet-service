@@ -2,8 +2,10 @@ package com.SportMeet.Service.Controller;
 
 import com.SportMeet.Service.Interface.ActivityInterface;
 import com.SportMeet.Service.Model.Empty.Activity;
+import com.SportMeet.Service.Model.Empty.Result;
 import com.SportMeet.Service.Model.Empty.SignUp;
 import com.SportMeet.Service.Model.Empty.User;
+import com.SportMeet.Service.Service.BothService;
 import com.google.gson.Gson;
 import org.apache.log4j.Logger;
 import org.json.JSONArray;
@@ -28,17 +30,16 @@ public class ActivityController {
     @Autowired
     ActivityInterface activityDo;
 
-    @RequestMapping(value = "activity")
-    public String indexActivity() {
-        return "activity";
-    }
-
     @RequestMapping(value = "getMsg")
     @ResponseBody
     public String index() {
         List<Activity> activities = activityDo.getIndexActivity();
-        JSONArray actjson = new JSONArray(activities);
-        return actjson.toString();
+        return new Result<List<Activity>>(
+                BothService.SUCCESS,
+                true,
+                "获取所有项目成功",
+                activities
+        ).toString();
     }
 
     @RequestMapping(value = "signup")
@@ -46,9 +47,19 @@ public class ActivityController {
     public String signupActivity(@RequestBody String signupInfo) {
         SignUp signUp = new Gson().fromJson(signupInfo, SignUp.class);
         if (activityDo.addSignUp(signUp) == 0) {
-            return "0";
+            return new Result<Object>(
+                    0,
+                    false,
+                    "添加数据库失败",
+                    null
+            ).toString();
         }
-        return "1";
+        return new Result<Object>(
+                BothService.SUCCESS,
+                true,
+                "添加数据库成功",
+                null
+        ).toString();
     }
 
     @RequestMapping(value = "issignup")
@@ -57,9 +68,19 @@ public class ActivityController {
         SignUp signUp = new Gson().fromJson(signupInfo, SignUp.class);
         int res = activityDo.getSignUpCount(signUp);
         if (res == 0) {
-            return "null";
+            return new Result<Integer>(
+                    BothService.SUCCESS,
+                    true,
+                    "该用户尚未报名",
+                    res
+            ).toString();
         }
-        return "isSignUp";
+        return new Result<Integer>(
+                BothService.SUCCESS,
+                false,
+                "该用户已经报名",
+                res
+        ).toString();
     }
 
     @RequestMapping(value = "countact")
@@ -67,10 +88,12 @@ public class ActivityController {
     public String getCountUserSign(@RequestBody String user) {
         User userinfo = new Gson().fromJson(user, User.class);
         int id = userinfo.getId();
-        if (activityDo.getSignUpCount(id) >= 5) {
-            return "maxup";
-        }
-        return "nomax";
+        return new Result<Integer>(
+                BothService.SUCCESS,
+                true,
+                "用户报名数量",
+                activityDo.getSignUpCount(id)
+        ).toString();
     }
 
     @RequestMapping(value = "searchact")
@@ -81,7 +104,12 @@ public class ActivityController {
         name = "%"+name+"%";
         actMsg.setMsg(name);
         List<Activity> list = activityDo.getActivity(actMsg);
-        return new Gson().toJson(list);
+        return new Result<List<Activity>>(
+                BothService.SUCCESS,
+                true,
+                "模糊查询成功",
+                list
+        ).toString();
     }
 
     @RequestMapping(value = "getact")
@@ -103,7 +131,7 @@ public class ActivityController {
             ResAct.add(actMap.get(a.getActivityid()));
         }
 
-        return new Gson().toJson(ResAct);
+        return new Result<List<Activity>>(BothService.SUCCESS, true, "获取该用户报名项目成功", ResAct).toString();
     }
 
     @RequestMapping(value = "unsign")
@@ -111,9 +139,18 @@ public class ActivityController {
     public String unSignUp(@RequestBody String Info) {
         SignUp signUp = new Gson().fromJson(Info, SignUp.class);
         int res = activityDo.deleteSignUp(signUp);
-        if (res != 0) {
-            return "true";
-        }
-        return "false";
+        if (res != 0)
+            return new Result<Object>(
+                    BothService.SUCCESS,
+                    true,
+                    "删除用户报名数据成功",
+                    null
+            ).toString();
+        return new Result<Object>(
+                BothService.FAILS,
+                false,
+                "删除用户数据失败",
+                null
+        ).toString();
     }
 }

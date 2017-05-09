@@ -18,22 +18,7 @@ import java.util.Map;
 /**
  * Created by luohao3 on 2017/3/19.
  */
-public class UserModel {
-    private String resource = "config/mybatis/mybatisConfig.xml";
-    private InputStream inputStream=null;
-    private SqlSessionFactory sqlSessionFactory=null;
-    private SqlSession session=null;
-
-    private void create() {
-        try {
-            inputStream = Resources.getResourceAsStream(resource);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
-        session = sqlSessionFactory.openSession();
-    }
-
+public class UserModel extends BaseModel {
     public User getUser(String id) {
         create();
         String SQLClass = "com.SportMeet.Service.Model.UserMapper.getUser";
