@@ -1,5 +1,7 @@
 package com.SportMeet.Service.Model.Empty;
 
+import com.google.gson.Gson;
+
 /**
  * Created by luohao3 on 2017/4/25.
  */
@@ -52,12 +54,6 @@ public class Weather {
 
     @Override
     public String toString() {
-        return "Weather{" +
-                "weather='" + weather + '\'' +
-                ", tempche='" + tempche + '\'' +
-                ", direct='" + direct + '\'' +
-                ", power='" + power + '\'' +
-                ", image='" + image + '\'' +
-                '}';
+        return new Gson().toJson(this);
     }
 }

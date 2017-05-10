@@ -1,5 +1,7 @@
 package com.SportMeet.Service.Model.Empty;
 
+import com.google.gson.Gson;
+
 /**
  * Created by luohao on 2017/4/8.
  */
@@ -25,9 +27,6 @@ public class Collage {
 
     @Override
     public String toString() {
-        return "Collage{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                '}';
+        return new Gson().toJson(this);
     }
 }

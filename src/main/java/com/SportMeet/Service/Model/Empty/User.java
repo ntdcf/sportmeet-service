@@ -1,5 +1,7 @@
 package com.SportMeet.Service.Model.Empty;
 
+import com.google.gson.Gson;
+
 /**
  * Created by luohao3 on 2017/3/19.
  */
@@ -79,15 +81,6 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", railname='" + railname + '\'' +
-                ", collage=" + collage +
-                ", internetname='" + internetname + '\'' +
-                ", grade=" + grade +
-                ", sex=" + sex +
-                '}';
+        return new Gson().toJson(this);
     }
 }

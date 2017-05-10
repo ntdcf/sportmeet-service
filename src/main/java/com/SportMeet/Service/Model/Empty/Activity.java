@@ -1,5 +1,7 @@
 package com.SportMeet.Service.Model.Empty;
 
+import com.google.gson.Gson;
+
 import java.sql.Date;
 
 /**
@@ -54,12 +56,6 @@ public class Activity {
 
     @Override
     public String toString() {
-        return "Activity{" +
-                "id=" + id +
-                ", sendtime=" + sendtime +
-                ", user=" + user +
-                ", msg='" + msg + '\'' +
-                ", sex=" + sex +
-                '}';
+        return new Gson().toJson(this);
     }
 }
