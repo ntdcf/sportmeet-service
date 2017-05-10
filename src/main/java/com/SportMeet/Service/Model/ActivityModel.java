@@ -13,22 +13,7 @@ import java.util.List;
 /**
  * Created by luohao3 on 2017/3/20.
  */
-public class ActivityModel {
-    private String resource = "config/mybatis/mybatisConfig.xml";
-    private InputStream inputStream=null;
-    private SqlSessionFactory sqlSessionFactory=null;
-    private SqlSession session=null;
-
-    private void create() {
-        try {
-            inputStream = Resources.getResourceAsStream(resource);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
-        session = sqlSessionFactory.openSession();
-    }
-
+public class ActivityModel extends BaseModel {
     public List<Activity> getActivity() {
         create();
         String SQLClass = "com.SportMeet.Service.Model.ActivityMapper.getActivity";

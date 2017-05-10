@@ -15,22 +15,7 @@ import java.util.List;
 /**
  * Created by luohao on 2017/4/16.
  */
-public class SignUpModel {
-    private String resource = "config/mybatis/mybatisConfig.xml";
-    private InputStream inputStream=null;
-    private SqlSessionFactory sqlSessionFactory=null;
-    private SqlSession session=null;
-
-    private void create() {
-        try {
-            inputStream = Resources.getResourceAsStream(resource);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
-        session = sqlSessionFactory.openSession();
-    }
-
+public class SignUpModel extends BaseModel {
     public int addSignUp(SignUp signUp) {
         create();
         String SQLClass = "com.SportMeet.Service.Model.ActivityMapper.addSignUp";

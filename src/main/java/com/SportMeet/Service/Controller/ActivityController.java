@@ -7,8 +7,6 @@ import com.SportMeet.Service.Model.Empty.SignUp;
 import com.SportMeet.Service.Model.Empty.User;
 import com.SportMeet.Service.Service.BothService;
 import com.google.gson.Gson;
-import org.apache.log4j.Logger;
-import org.json.JSONArray;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -25,7 +23,6 @@ import java.util.Map;
  */
 @Controller
 public class ActivityController {
-    private static final Logger logger = Logger.getLogger(ActivityController.class);
 
     @Autowired
     ActivityInterface activityDo;
