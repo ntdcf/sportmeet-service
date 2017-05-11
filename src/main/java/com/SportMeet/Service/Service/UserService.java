@@ -6,7 +6,6 @@ import com.SportMeet.Service.Model.Empty.User;
 import com.SportMeet.Service.Model.UserModel;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 

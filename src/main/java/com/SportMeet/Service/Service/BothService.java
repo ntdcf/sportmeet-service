@@ -1,8 +1,5 @@
 package com.SportMeet.Service.Service;
 
-import com.SportMeet.Service.Model.Empty.Result;
-import com.google.gson.Gson;
-
 /**
  * Created by luohao on 2017/4/3.
  */

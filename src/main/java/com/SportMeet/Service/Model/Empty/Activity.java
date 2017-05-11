@@ -2,8 +2,6 @@ package com.SportMeet.Service.Model.Empty;
 
 import com.google.gson.Gson;
 
-import java.sql.Date;
-
 /**
  * Created by luohao3 on 2017/3/20.
  */

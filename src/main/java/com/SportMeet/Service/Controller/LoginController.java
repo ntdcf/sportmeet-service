@@ -2,8 +2,6 @@ package com.SportMeet.Service.Controller;
 
 import com.SportMeet.Service.Interface.UserInterface;
 import com.SportMeet.Service.Model.Empty.User;
-import com.SportMeet.Service.Service.BothService;
-import com.google.gson.Gson;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

@@ -1,13 +1,7 @@
 package com.SportMeet.Service.Model;
 
 import com.SportMeet.Service.Model.Empty.Activity;
-import org.apache.ibatis.io.Resources;
-import org.apache.ibatis.session.SqlSession;
-import org.apache.ibatis.session.SqlSessionFactory;
-import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.List;
 
 /**

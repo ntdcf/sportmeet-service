@@ -2,18 +2,8 @@ package com.SportMeet.Service.Model;
 
 import com.SportMeet.Service.Model.Empty.Collage;
 import com.SportMeet.Service.Model.Empty.User;
-import com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException;
-import org.apache.ibatis.io.Resources;
-import org.apache.ibatis.session.RowBounds;
-import org.apache.ibatis.session.SqlSession;
-import org.apache.ibatis.session.SqlSessionFactory;
-import org.apache.ibatis.session.SqlSessionFactoryBuilder;
-import org.junit.Test;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by luohao3 on 2017/3/19.
